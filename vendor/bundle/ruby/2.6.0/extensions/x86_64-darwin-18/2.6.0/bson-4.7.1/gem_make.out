@@ -1,0 +1,119 @@
+current directory: /Users/misato.naruse/Documents/naruse/rails_tutorial/vendor/bundle/ruby/2.6.0/gems/bson-4.7.1/ext/bson
+/Users/misato.naruse/.rbenv/versions/2.6.5/bin/ruby -I /Users/misato.naruse/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20200124-56595-nysa49.rb extconf.rb
+creating Makefile
+
+current directory: /Users/misato.naruse/Documents/naruse/rails_tutorial/vendor/bundle/ruby/2.6.0/gems/bson-4.7.1/ext/bson
+make "DESTDIR=" clean
+
+current directory: /Users/misato.naruse/Documents/naruse/rails_tutorial/vendor/bundle/ruby/2.6.0/gems/bson-4.7.1/ext/bson
+make "DESTDIR="
+compiling bytebuf.c
+compiling endian.c
+compiling init.c
+compiling libbson-utf8.c
+compiling read.c
+read.c:109:27: warning: implicit conversion loses integer precision: 'long' to 'uint32_t' (aka 'unsigned int') [-Wshorten-64-to-32]
+  const uint32_t length = FIX2LONG(i);
+                 ~~~~~~   ^~~~~~~~~~~
+/Users/misato.naruse/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/ruby.h:393:21: note: expanded from macro 'FIX2LONG'
+#define FIX2LONG(x) RB_FIX2LONG(x)
+                    ^~~~~~~~~~~~~~
+/Users/misato.naruse/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/ruby.h:377:25: note: expanded from macro 'RB_FIX2LONG'
+#define RB_FIX2LONG(x) ((long)RSHIFT((SIGNED_VALUE)(x),1))
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+compiling util.c
+compiling write.c
+write.c:213:14: warning: implicit conversion loses integer precision: 'long' to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+    length = RSTRING_LEN(utf8_string);
+           ~ ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/misato.naruse/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/ruby.h:1000:6: note: expanded from macro 'RSTRING_LEN'
+     RSTRING_EMBED_LEN(str) : \
+     ^~~~~~~~~~~~~~~~~~~~~~
+/Users/misato.naruse/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/ruby.h:996:6: note: expanded from macro 'RSTRING_EMBED_LEN'
+     (long)((RBASIC(str)->flags >> RSTRING_EMBED_LEN_SHIFT) & \
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+write.c:213:14: warning: implicit conversion loses integer precision: 'long' to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+    length = RSTRING_LEN(utf8_string);
+           ~ ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/misato.naruse/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/ruby.h:1001:28: note: expanded from macro 'RSTRING_LEN'
+     RSTRING(str)->as.heap.len)
+     ~~~~~~~~~~~~~~~~~~~~~~^~~
+write.c:236:12: warning: implicit conversion loses integer precision: 'long' to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  length = RSTRING_LEN(utf8_string);
+         ~ ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/misato.naruse/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/ruby.h:1000:6: note: expanded from macro 'RSTRING_LEN'
+     RSTRING_EMBED_LEN(str) : \
+     ^~~~~~~~~~~~~~~~~~~~~~
+/Users/misato.naruse/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/ruby.h:996:6: note: expanded from macro 'RSTRING_EMBED_LEN'
+     (long)((RBASIC(str)->flags >> RSTRING_EMBED_LEN_SHIFT) & \
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+write.c:236:12: warning: implicit conversion loses integer precision: 'long' to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  length = RSTRING_LEN(utf8_string);
+         ~ ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/misato.naruse/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/ruby.h:1001:28: note: expanded from macro 'RSTRING_LEN'
+     RSTRING(str)->as.heap.len)
+     ~~~~~~~~~~~~~~~~~~~~~~^~~
+write.c:280:12: warning: implicit conversion loses integer precision: 'long' to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  length = RSTRING_LEN(string);
+         ~ ^~~~~~~~~~~~~~~~~~~
+/Users/misato.naruse/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/ruby.h:1000:6: note: expanded from macro 'RSTRING_LEN'
+     RSTRING_EMBED_LEN(str) : \
+     ^~~~~~~~~~~~~~~~~~~~~~
+/Users/misato.naruse/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/ruby.h:996:6: note: expanded from macro 'RSTRING_EMBED_LEN'
+     (long)((RBASIC(str)->flags >> RSTRING_EMBED_LEN_SHIFT) & \
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+write.c:280:12: warning: implicit conversion loses integer precision: 'long' to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  length = RSTRING_LEN(string);
+         ~ ^~~~~~~~~~~~~~~~~~~
+/Users/misato.naruse/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/ruby.h:1001:28: note: expanded from macro 'RSTRING_LEN'
+     RSTRING(str)->as.heap.len)
+     ~~~~~~~~~~~~~~~~~~~~~~^~~
+write.c:309:26: warning: implicit conversion loses integer precision: 'long' to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  const int32_t length = RSTRING_LEN(symbol_str);
+                ~~~~~~   ^~~~~~~~~~~~~~~~~~~~~~~
+/Users/misato.naruse/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/ruby.h:1000:6: note: expanded from macro 'RSTRING_LEN'
+     RSTRING_EMBED_LEN(str) : \
+     ^~~~~~~~~~~~~~~~~~~~~~
+/Users/misato.naruse/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/ruby.h:996:6: note: expanded from macro 'RSTRING_EMBED_LEN'
+     (long)((RBASIC(str)->flags >> RSTRING_EMBED_LEN_SHIFT) & \
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+write.c:309:26: warning: implicit conversion loses integer precision: 'long' to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  const int32_t length = RSTRING_LEN(symbol_str);
+                ~~~~~~   ^~~~~~~~~~~~~~~~~~~~~~~
+/Users/misato.naruse/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/ruby.h:1001:28: note: expanded from macro 'RSTRING_LEN'
+     RSTRING(str)->as.heap.len)
+     ~~~~~~~~~~~~~~~~~~~~~~^~~
+write.c:328:29: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  pvt_put_cstring(b, c_str, length, "Key");
+  ~~~~~~~~~~~~~~~           ^~~~~~
+write.c:358:24: warning: implicit conversion loses integer precision: 'long' to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  pvt_replace_int32(b, _position, NUM2LONG(newval));
+  ~~~~~~~~~~~~~~~~~    ^~~~~~~~~
+write.c:358:35: warning: implicit conversion loses integer precision: 'long' to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  pvt_replace_int32(b, _position, NUM2LONG(newval));
+  ~~~~~~~~~~~~~~~~~               ^~~~~~~~~~~~~~~~
+/Users/misato.naruse/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/ruby.h:678:21: note: expanded from macro 'NUM2LONG'
+#define NUM2LONG(x) RB_NUM2LONG(x)
+                    ^~~~~~~~~~~~~~
+/Users/misato.naruse/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/ruby.h:677:24: note: expanded from macro 'RB_NUM2LONG'
+#define RB_NUM2LONG(x) rb_num2long_inline(x)
+                       ^~~~~~~~~~~~~~~~~~~~~
+write.c:488:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  new_length = new_position - position;
+             ~ ~~~~~~~~~~~~~^~~~~~~~~~
+write.c:489:24: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  pvt_replace_int32(b, position, new_length);
+  ~~~~~~~~~~~~~~~~~    ^~~~~~~~
+write.c:633:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  new_length = new_position - position;
+             ~ ~~~~~~~~~~~~~^~~~~~~~~~
+write.c:634:24: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int32_t' (aka 'int') [-Wshorten-64-to-32]
+  pvt_replace_int32(b, position, new_length);
+  ~~~~~~~~~~~~~~~~~    ^~~~~~~~
+15 warnings generated.
+linking shared-object bson_native.bundle
+
+current directory: /Users/misato.naruse/Documents/naruse/rails_tutorial/vendor/bundle/ruby/2.6.0/gems/bson-4.7.1/ext/bson
+make "DESTDIR=" install
+/usr/local/bin/ginstall -c -m 0755 bson_native.bundle ./.gem.20200124-56595-zwd0c6
