@@ -8,6 +8,7 @@ class Product
   validate :check_ng_word
 
 =begin
+  課題②
   Article モデルのname プロパティにNGワードチェックバリデーションを追加する
   NGワード
   江頭、タイツ、露出狂、2:50

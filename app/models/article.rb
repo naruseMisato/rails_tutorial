@@ -7,8 +7,8 @@ class Article
   field :published_at, type: DateTime
   field :pv_count, type: Integer
 
-  # 課題①
 =begin
+  課題①
   Article モデルのtitle に以下のバリデーションを記述する
   presence バリデーション
   メッセージ「タイトルは入力必須です」
