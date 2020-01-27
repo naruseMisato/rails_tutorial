@@ -7,18 +7,14 @@ class Article
   field :published_at, type: DateTime
   field :pv_count, type: Integer
 
-  validate :is_required_check
-  validate :length_range
-
-  def is_required_check
-    if title.blank?
-      errors.add(:title, "タイトルは入力必須です")
-    end
-  end
-
-  def length_range
-    if title.count > 20
-      errors.add(:title, "20文字以内で入力してください")
-    end
-  end
+  # 課題①
+  /*
+  Article モデルのtitle に以下のバリデーションを記述する
+  presence バリデーション
+  メッセージ「タイトルは入力必須です」
+  20文字length バリデーション
+  メッセージ「タイトルは20文字以内で入力してください」
+  */
+  # バリデーションヘルパー
+  validates :title, presence:{message: "タイトルは入力必須です"},length: {maximum: 20, message: "タイトルは20文字以内で入力してください"}
 end

@@ -8,7 +8,8 @@ class User
   field :mail_address, type: String
 
   # 文字の長さ
-  # validates :name, length: {minimum: 5, maximum: 10 }
+  validates :name, length: {minimum: 5, maximum: 10, message: "エラー"}
+  validates(:name, {:length => {:minimum => 5, :maximum => 10}})
   # 文字の長さ２
   # validates :name, length: { in: 5..10 }
   # 文字数指定
@@ -16,5 +17,5 @@ class User
 
   # 正規表現
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  validates :mail_address, presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGEX }
+  validates :mail_address, presence: {message: "エラー"}, uniqueness: true, format: { with: VALID_EMAIL_REGEX }
 end
