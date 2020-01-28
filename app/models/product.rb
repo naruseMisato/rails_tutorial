@@ -4,7 +4,7 @@ class Product
 
   field :name, type: String
 
-  ERROR_STRS = %w[江頭 タイツ 露出狂 2:50]
+  ERROR_STRS = %w[江頭 タイツ 露出狂 2:50].freeze
 
   validate :check_ng_word
 
