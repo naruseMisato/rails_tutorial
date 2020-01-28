@@ -1,4 +1,4 @@
-class User
+﻿class User
   include Mongoid::Document
   include Mongoid::Timestamps
 
@@ -6,6 +6,8 @@ class User
   field :message, type: String
   field :age, type: Integer
   field :mail_address, type: String
+
+  has_many :products, clsss_name: Product
 
   # いろんなバリデーション
 

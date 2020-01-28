@@ -7,6 +7,8 @@ class Article
   field :published_at, type: DateTime
   field :pv_count, type: Integer
 
+  belongs_to :user, clsss_name: User
+
 =begin
   課題①
   Article モデルのtitle に以下のバリデーションを記述する
