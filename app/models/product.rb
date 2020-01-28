@@ -3,7 +3,8 @@ class Product
   include Mongoid::Timestamps
 
   field :name, type: String
-  field :errorStr, type: String
+
+  ERROR_STRS = %w[江頭 タイツ 露出狂 2:50]
 
   validate :check_ng_word
 
@@ -15,7 +16,6 @@ class Product
   NGワードは配列でクラス定数で用意すること
 =end
   def check_ng_word
-    errorStr = ["江頭", "タイツ", "露出狂", "2:50"]
-    errors.add(:name, "使えない文字列が含まれています") if errorStr.include? name
+    errors.add(:name, "使えない文字列が含まれています") if ERROR_STRS.include? name
   end
 end
