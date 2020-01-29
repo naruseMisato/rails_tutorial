@@ -7,7 +7,7 @@
   field :age, type: Integer
   field :mail_address, type: String
 
-  has_many :products, clsss_name: Product
+  has_many :products
 
   # いろんなバリデーション
 

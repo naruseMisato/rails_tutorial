@@ -8,6 +8,8 @@ class Product
 
   validate :check_ng_word
 
+  belongs_to :user
+
 =begin
   課題②
   Article モデルのname プロパティにNGワードチェックバリデーションを追加する
