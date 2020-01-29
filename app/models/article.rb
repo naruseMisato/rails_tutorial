@@ -7,7 +7,7 @@ class Article
   field :published_at, type: DateTime
   field :pv_count, type: Integer
 
-  belongs_to :user, clsss_name: User
+  belongs_to :user
 
 =begin
   課題①

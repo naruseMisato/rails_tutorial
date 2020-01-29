@@ -7,7 +7,7 @@
   field :age, type: Integer
   field :mail_address, type: String
 
-  has_many :products
+  has_many :articles
 
   # いろんなバリデーション
 
