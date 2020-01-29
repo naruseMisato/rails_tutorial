@@ -4,7 +4,7 @@ class Product
 
   field :name, type: String
 
-  ERROR_STRS = %w[江頭 タイツ 露出狂 2:50].freeze
+  NG_WORDS = %w[江頭 タイツ 露出狂 2:50].freeze
 
   validate :check_ng_word
 
@@ -15,7 +15,8 @@ class Product
   江頭、タイツ、露出狂、2:50
   NGワードは配列でクラス定数で用意すること
 =end
-  def check_ng_word
-    errors.add(:name, "使えない文字列が含まれています") if ERROR_STRS.include? name
-  end
+  private
+   def check_ng_word
+     errors.add(:name, "使えない文字列が含まれています") if NG_WORDS.include? name
+   end
 end
