@@ -17,6 +17,6 @@ class Product
 =end
   private
    def check_ng_word
-     errors.add(:name, "使えない文字列が含まれています") if NG_WORDS.include? name
+    errors.add(:name, "使えない文字列が含まれています") if NG_WORDS.any? { |data| name.include?(data) }
    end
 end
