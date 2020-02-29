@@ -17,7 +17,7 @@ class Product
   江頭、タイツ、露出狂、2:50
   NGワードは配列でクラス定数で用意すること
 =end
-  private
+private
    def check_ng_word
     errors.add(:name, "使えない文字列が含まれています") if NG_WORDS.any? { |data| name.include?(data) }
    end
