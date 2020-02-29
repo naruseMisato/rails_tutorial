@@ -20,11 +20,11 @@ class Article
 =end
   # バリデーションヘルパー
   validates :title, presence:{message: "タイトルは入力必須です"},length: {maximum: 20, message: "タイトルは20文字以内で入力してください"}
-  validate :check_protection_organization_user
+  validate :check_protection_organization
 
 private
   # 投稿IDが里親の場合 && ユーザが愛護団体じゃない場合 && 里親で３回投稿したとことがある場合はエラーを返す
-  def check_protection_organization_user
+  def check_protection_organization
     if category_id.eql?("2") && # -> 里親カテゴリ : 2
       !user.get_is_protection_organization &&
       user.posted_article_foster_parent_count > 3
