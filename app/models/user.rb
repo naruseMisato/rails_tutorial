@@ -19,7 +19,7 @@
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :mail_address, presence: {message: "エラー"}, uniqueness: true, format: { with: VALID_EMAIL_REGEX }
 
-  # 里親かどうか
+  # 愛護団体かどうか
   def get_is_protection_organization
     is_protection_organization
   end
