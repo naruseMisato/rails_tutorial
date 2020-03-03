@@ -25,9 +25,9 @@ class Article
 private
   # 投稿IDが里親の場合 && ユーザが愛護団体じゃない場合 && 里親で３回投稿したとことがある場合はエラーを返す
   def check_protection_organization
-    if category_id.eql?("2") && # -> 里親カテゴリ : 2
-      !user.get_is_protection_organization &&
-      user.posted_article_foster_parent_count > 1
+    return unless category_id.eql?("2") # -> 里親カテゴリ : 2
+    return if user.is_protection_organization 
+    if user.posted_article_foster_parent_count > 1
       errors.add(:is_protection_organization, "愛護団体じゃない場合、３回までしか里親カテゴリは投稿できません") 
     end
   end

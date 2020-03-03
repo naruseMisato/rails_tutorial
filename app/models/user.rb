@@ -20,9 +20,9 @@
   validates :mail_address, presence: {message: "エラー"}, uniqueness: true, format: { with: VALID_EMAIL_REGEX }
 
   # 愛護団体かどうか
-  def get_is_protection_organization
-    is_protection_organization
-  end
+  # def get_is_protection_organization
+  #   is_protection_organization
+  # end
 
   # 過去に里親カテゴリで投稿した数
   def posted_article_foster_parent_count
