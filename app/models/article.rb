@@ -27,7 +27,7 @@ private
   def check_protection_organization
     if category_id.eql?("2") && # -> 里親カテゴリ : 2
       !user.get_is_protection_organization &&
-      user.posted_article_foster_parent_count > 3
+      user.posted_article_foster_parent_count > 1
       errors.add(:is_protection_organization, "愛護団体じゃない場合、３回までしか里親カテゴリは投稿できません") 
     end
   end
