@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   # # resourcesの設定
   # resources :users, except: [:new, :edit]
+  resources :products, only: [:index, :show]
 
   # ネストの設定
   resources :users, except: [:new, :edit] do
