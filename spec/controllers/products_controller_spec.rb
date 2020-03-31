@@ -1,19 +1,18 @@
 require "rails_helper"
 
 describe ProductsController, type: :controller do
-    describe "GET #inde" do
-        let(:user) { FactoryBot.create(:testUser) }
-        let(:product) { FactoryBot.createt(:testProduct) }
-        subject { user.articles[-1].valid? }
-        before do
-            User.destroy_all
-            Product.destroy_all
-        end
+    describe "GET #index" do
         it "成功" do
             expect(response.status).to eq 200
         end
-        it ':newテンプレートを表示すること' do
-            expect(response).to render_template :new
-          end
     end
-end
+    describe "#create" do
+      context "request is succeed" do
+        it "returns success message" do
+          microtaskhub = ProductsController.new
+          allow(microtaskhub).to receive(:http_method) { {"header" => 200, "body" => "test is created"} }
+          expect(microtaskhub.create()).to eq "200 : test is created"
+        end
+      end
+    end
+  end
